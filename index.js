@@ -1,3 +1,8 @@
+	
+siraj@bigdataguys.com
+
+
+
 var express = require('express')
 var bodyParser = require('body-parser')
 var request = require('request')
@@ -54,7 +59,7 @@ app.post('/webhook/', function (req, res) {
     res.sendStatus(200)
 })
 
-var token = " enter token here"
+var token = "EAAC9kNSXFjwBALkUa29LvdHHFh0SzemIDCKlN1fW2TRHxvUXx9822f53KEMzyZBEqFftuQcWOMiMhYYy4slEIMzZBEz3Nx4PY47nzHBLqD8rMOcoDhplYYljtOK1fVI1EsoI9eZA9MXhe3Qew6WOKoI7agTL1DfwwUPsNSOGgZDZD"
 
 // function to echo back messages - added by Stefan
 
@@ -63,7 +68,7 @@ function sendTextMessage(sender, text) {
         text:text
     }
     request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
+        url: 'https://graph.facebook.com/v2.6/me/...',
         qs: {access_token:token},
         method: 'POST',
         json: {
@@ -91,10 +96,10 @@ function sendGenericMessage(sender) {
                 "elements": [{
                     "title": "Ai Chat Bot Communities",
                     "subtitle": "Communities to Follow",
-                    "image_url": "http://1u88jj3r4db2x4txp44yqfj1.wpengine.netdna-cdn.com/wp-content/uploads/2016/04/chatbot-930x659.jpg",
+                    "image_url": "http://1u88jj3r4db2x4txp44yqfj1.wpengine.netdna-cdn.com/...",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.facebook.com/groups/aichatbots/",
+                        "url": "https://www.facebook.com/groups/aic...",
                         "title": "FB Chatbot Group"
                     }, {
                         "type": "web_url",
@@ -108,7 +113,7 @@ function sendGenericMessage(sender) {
                 }, {
                     "title": "Chatbots FAQ",
                     "subtitle": "Aking the Deep Questions",
-                    "image_url": "https://tctechcrunch2011.files.wordpress.com/2016/04/facebook-chatbots.png?w=738",
+                    "image_url": "https://tctechcrunch2011.files.wordpress.com/...",
                     "buttons": [{
                         "type": "postback",
                         "title": "What's the benefit?",
@@ -125,7 +130,7 @@ function sendGenericMessage(sender) {
                 },  {
                     "title": "Learning More",
                     "subtitle": "Aking the Deep Questions",
-                    "image_url": "http://www.brandknewmag.com/wp-content/uploads/2015/12/cortana.jpg",
+                    "image_url": "http://www.brandknewmag.com/wp-cont...",
                     "buttons": [{
                         "type": "postback",
                         "title": "AIML",
@@ -144,7 +149,7 @@ function sendGenericMessage(sender) {
         }
     }
     request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
+        url: 'https://graph.facebook.com/v2.6/me/...',
         qs: {access_token:token},
         method: 'POST',
         json: {
@@ -159,4 +164,3 @@ function sendGenericMessage(sender) {
         }
     })
 }
-
